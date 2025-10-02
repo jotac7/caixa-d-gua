@@ -3,60 +3,749 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Plataforma de Músicas</title>
-    </head>
-<body>
+    <title>Nike Air Max - Guia Completo | TN, DN e 95</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+            color: white;
+            line-height: 1.6;
+        }
 
-    <header>
-        <h1>🎧 Melody Hub 🎶</h1>
-        <nav>
-            <ul>
-                <li><a href="#lancamentos">Lançamentos</a></li>
-                <li><a href="#populares">Populares</a></li>
-                <li><a href="#generos">Gêneros</a></li>
-                <li><a href="#minha-playlist">Minha Playlist</a></li>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ff6b35;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6b35;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b35;
+        }
+
+        .hero {
+            margin-top: 80px;
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ff6b35" opacity="0.1" width="1200" height="600"/><circle fill="%23ffffff" opacity="0.05" cx="200" cy="150" r="100"/><circle fill="%23ffffff" opacity="0.05" cx="800" cy="400" r="150"/><circle fill="%23ffffff" opacity="0.05" cx="1000" cy="200" r="80"/></svg>');
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+        }
+
+        .models-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: #ff6b35;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .model-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,107,53,0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .model-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.1);
+            border-color: #ff6b35;
+        }
+
+        .model-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .model-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .model-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ff6b35;
+        }
+
+        .model-year {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .model-description {
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features-list li:before {
+            content: '✓';
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        .specs-section {
+            background: rgba(255,107,53,0.1);
+            padding: 60px 0;
+            margin: 60px 0;
+            border-radius: 20px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .spec-card {
+            background: rgba(0,0,0,0.3);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .spec-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ff6b35;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .comparison-table th {
+            background: rgba(255,107,53,0.2);
+            font-weight: bold;
+            color: #ff6b35;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ff6b35;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            width: 45%;
+            position: relative;
+            border: 1px solid rgba(255,107,53,0.3);
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #ff6b35;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .footer {
+            background: rgba(0,0,0,0.9);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,107,53,0.3);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #1a1a1a, #333333);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            border: 2px solid #ff6b35;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ff6b35;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .models-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                margin-left: 40px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-year {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                👟 Nike Air Max Guide
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="scrollToSection('hero')">Início</a></li>
+                <li><a onclick="scrollToSection('models')">Modelos</a></li>
+                <li><a onclick="scrollToSection('specs')">Especificações</a></li>
+                <li><a onclick="scrollToSection('timeline')">História</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="lancamentos">
-            <h2>🔥 Lançamentos da Semana</h2>
-            <article>
-                <h3>Nome da Música 1</h3>
-                <p>Artista: Nome do Artista A</p>
-                <audio controls>
-                    <source src="caminho/para/musica1.mp3" type="audio/mpeg">
-                    Seu navegador não suporta o elemento de áudio.
-                </audio>
-            </article>
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Nike Air Max</h1>
+            <p>Descubra tudo sobre os icônicos tênis Air Max da Nike. Conheça a história, tecnologia e características dos modelos TN, DN e 95 que revolucionaram o mundo dos sneakers.</p>
+            <a href="#models" class="cta-button" onclick="scrollToSection('models')">Explorar Modelos</a>
+        </div>
+    </section>
 
-            <article>
-                <h3>Nome da Música 2</h3>
-                <p>Artista: Nome do Artista B</p>
-                <audio controls>
-                    <source src="caminho/para/musica2.ogg" type="audio/ogg">
-                    Seu navegador não suporta o elemento de áudio.
-                </audio>
-            </article>
+    <section id="models" class="models-section">
+        <div class="container">
+            <h2 class="section-title">Modelos Principais</h2>
             
-            </section>
+            <div class="models-grid">
+                <div class="model-card" onclick="openModal('tn')">
+                    <div class="model-image">👟</div>
+                    <h3 class="model-title">Air Max TN</h3>
+                    <div class="model-year">Lançado em 1998</div>
+                    <p class="model-description">
+                        O Air Max TN (Tuned Air) revolucionou o design com sua tecnologia Tuned Air e visual futurista. Conhecido por sua sola ondulada característica.
+                    </p>
+                    <ul class="features-list">
+                        <li>Tecnologia Tuned Air</li>
+                        <li>Design agressivo e futurista</li>
+                        <li>Máximo amortecimento</li>
+                        <li>Sola TPU ondulada</li>
+                    </ul>
+                </div>
 
-        <section id="populares">
-            <h2>🔝 Músicas Mais Populares</h2>
-            <ul>
-                <li>Música Pop de Sucesso - Artista X</li>
-                <li>Hino Rock Clássico - Banda Y</li>
-                <li>Batida Eletrônica - DJ Z</li>
-            </ul>
-        </section>
-    </main>
+                <div class="model-card" onclick="openModal('dn')">
+                    <div class="model-image">🔥</div>
+                    <h3 class="model-title">Air Max DN</h3>
+                    <div class="model-year">Lançado em 2024</div>
+                    <p class="model-description">
+                        O mais recente da linha Air Max, o DN traz inovação com tecnologia Dynamic Air e design contemporâneo que une tradição e modernidade.
+                    </p>
+                    <ul class="features-list">
+                        <li>Tecnologia Dynamic Air</li>
+                        <li>Design contemporâneo</li>
+                        <li>Materiais sustentáveis</li>
+                        <li>Conforto aprimorado</li>
+                    </ul>
+                </div>
 
-    <footer>
-        <p>&copy; 2025 Melody Hub. Todos os direitos reservados.</p>
-        <p><a href="#">Contato</a> | <a href="#">Termos de Uso</a></p>
+                <div class="model-card" onclick="openModal('95')">
+                    <div class="model-image">⚡</div>
+                    <h3 class="model-title">Air Max 95</h3>
+                    <div class="model-year">Lançado em 1995</div>
+                    <p class="model-description">
+                        Inspirado na anatomia humana, o Air Max 95 é um ícone atemporal com sua silhueta única e tecnologia Air Max visível no calcanhar e antepé.
+                    </p>
+                    <ul class="features-list">
+                        <li>Air Max visível</li>
+                        <li>Design anatômico</li>
+                        <li>Gradiente de cores</li>
+                        <li>Ícone dos anos 90</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="specs-section">
+        <div class="container">
+            <h2 class="section-title">Especificações Técnicas</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Air Max TN</th>
+                        <th>Air Max DN</th>
+                        <th>Air Max 95</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tecnologia de Ar</td>
+                        <td>Tuned Air</td>
+                        <td>Dynamic Air</td>
+                        <td>Air Max</td>
+                    </tr>
+                    <tr>
+                        <td>Ano de Lançamento</td>
+                        <td>1998</td>
+                        <td>2024</td>
+                        <td>1995</td>
+                    </tr>
+                    <tr>
+                        <td>Designer</td>
+                        <td>Sean McDowell</td>
+                        <td>Equipe Nike</td>
+                        <td>Sergio Lozano</td>
+                    </tr>
+                    <tr>
+                        <td>Inspiração</td>
+                        <td>Tubarão/Palmeira</td>
+                        <td>Futuro Sustentável</td>
+                        <td>Anatomia Humana</td>
+                    </tr>
+                    <tr>
+                        <td>Peso Aproximado</td>
+                        <td>380g</td>
+                        <td>350g</td>
+                        <td>400g</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h3 class="spec-title">Tecnologia Air Max</h3>
+                    <p>A tecnologia Air Max utiliza câmaras de ar pressurizadas na entressola para proporcionar amortecimento superior e conforto durante todo o dia.</p>
+                </div>
+                <div class="spec-card">
+                    <h3 class="spec-title">Materiais Premium</h3>
+                    <p>Construção com materiais de alta qualidade incluindo couro, mesh respirável e borracha durável para máxima performance e durabilidade.</p>
+                </div>
+                <div class="spec-card">
+                    <h3 class="spec-title">Design Icônico</h3>
+                    <p>Cada modelo possui características visuais únicas que os tornaram ícones da cultura sneaker e referências de estilo urbano.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Linha do Tempo Air Max</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Air Max 95</h3>
+                        <p>Sergio Lozano cria um design revolucionário inspirado na anatomia humana, com gradientes de cores que simulam músculos e ossos.</p>
+                    </div>
+                    <div class="timeline-year">1995</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Air Max TN</h3>
+                        <p>Sean McDowell desenvolve a tecnologia Tuned Air, criando um tênis com visual agressivo inspirado em tubarões e palmeiras.</p>
+                    </div>
+                    <div class="timeline-year">1998</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Evolução Contínua</h3>
+                        <p>A linha Air Max continua evoluindo com novas tecnologias, materiais e designs, mantendo-se relevante na cultura sneaker.</p>
+                    </div>
+                    <div class="timeline-year">2000s</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Air Max DN</h3>
+                        <p>Lançamento do mais recente modelo com foco em sustentabilidade e tecnologia Dynamic Air para uma nova geração.</p>
+                    </div>
+                    <div class="timeline-year">2024</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Nike Air Max Guide. Este é um site informativo não oficial sobre os tênis Nike Air Max.</p>
+            <p>Desenvolvido para fins educacionais e de demonstração.</p>
+        </div>
     </footer>
 
-</body>
-</html>
+    <!-- Modais -->
+    <div id="modal-tn" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('tn')">&times;</span>
+            <h2>Nike Air Max TN - Detalhes</h2>
+            <div class="model-image" style="height: 150px; margin: 20px 0;">👟</div>
+            <p><strong>Nome Completo:</strong> Nike Air Max Plus (TN)</p>
+            <p><strong>Designer:</strong> Sean McDowell</p>
+            <p><strong>Inspiração:</strong> Tubarão e palmeiras balançando ao vento</p>
+            <p><strong>Tecnologia:</strong> Tuned Air - sistema de ar pressurizado com diferentes zonas de pressão</p>
+            <p><strong>Características Únicas:</strong></p>
+            <ul>
+                <li>Sola TPU ondulada característica</li>
+                <li>Sistema de cadarços integrado ao design</li>
+                <li>Gradiente de cores icônico</li>
+                <li>Amortecimento personalizado por zona do pé</li>
+            </ul>
+            <p><strong>Impacto Cultural:</strong> Tornou-se símbolo da cultura urbana, especialmente popular na Europa e Austrália.</p>
+        </div>
+    </div>
 
+    <div id="modal-dn" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('dn')">&times;</span>
+            <h2>Nike Air Max DN - Detalhes</h2>
+            <div class="model-image" style="height: 150px; margin: 20px 0;">🔥</div>
+            <p><strong>Nome Completo:</strong> Nike Air Max DN</p>
+            <p><strong>Lançamento:</strong> 2024</p>
+            <p><strong>Conceito:</strong> Futuro sustentável dos sneakers</p>
+            <p><strong>Tecnologia:</strong> Dynamic Air - adaptação dinâmica do amortecimento</p>
+            <p><strong>Características Únicas:</strong></p>
+            <ul>
+                <li>Materiais reciclados e sustentáveis</li>
+                <li>Design minimalista e contemporâneo</li>
+                <li>Tecnologia de amortecimento adaptativo</li>
+                <li>Construção leve e respirável</li>
+            </ul>
+            <p><strong>Inovação:</strong> Representa o futuro da linha Air Max com foco em sustentabilidade e performance.</p>
+        </div>
+    </div>
+
+    <div id="modal-95" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('95')">&times;</span>
+            <h2>Nike Air Max 95 - Detalhes</h2>
+            <div class="model-image" style="height: 150px; margin: 20px 0;">⚡</div>
+            <p><strong>Nome Completo:</strong> Nike Air Max 95</p>
+            <p><strong>Designer:</strong> Sergio Lozano</p>
+            <p><strong>Inspiração:</strong> Anatomia humana - costelas, músculos e tendões</p>
+            <p><strong>Tecnologia:</strong> Air Max visível no calcanhar e antepé</p>
+            <p><strong>Características Únicas:</strong></p>
+            <ul>
+                <li>Design anatômico com linhas que simulam músculos</li>
+                <li>Gradiente de cores do escuro ao claro</li>
+                <li>Air Max visível em duas zonas</li>
+                <li>Silhueta baixa e elegante</li>
+            </ul>
+            <p><strong>Legado:</strong> Considerado um dos designs mais influentes da história dos sneakers, definindo tendências por décadas.</p>
+        </div>
+    </div>
+
+    <script>
+        // Função para rolar suavemente até uma seção
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Função para abrir modal
+        function openModal(modelId) {
+            const modal = document.getElementById(`modal-${modelId}`);
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Função para fechar modal
+        function closeModal(modelId) {
+            const modal = document.getElementById(`modal-${modelId}`);
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Fechar modal clicando fora do conteúdo
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Efeito de parallax no scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Animação de entrada dos cards
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.model-card, .spec-card, .timeline-item');
+            
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = 150;
+                
+                if (cardTop < window.innerHeight - cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Inicializar animações
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configurar estado inicial dos cards
+            const cards = document.querySelectorAll('.model-card, .spec-card, .timeline-item');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'all 0.6s ease';
+            });
+            
+            // Executar animação inicial
+            setTimeout(animateOnScroll, 100);
+        });
+
+        // Executar animação no scroll
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Efeito de digitação no título
+        function typeWriter() {
+            const title = document.querySelector('.hero h1');
+            const text = 'Nike Air Max';
+            title.textContent = '';
+            
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    title.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, 150);
+                }
+            }
+            type();
+        }
+
+        // Iniciar efeito de digitação quando a página carregar
+        window.addEventListener('load', function() {
+            setTimeout(typeWriter, 500);
+        });
+
+        // Adicionar efeito hover nos cards
+        document.querySelectorAll('.model-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9883eb228169c20f',t:'MTc1OTQwNTE1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
