@@ -163,6 +163,14 @@
             overflow: hidden;
         }
 
+        .model-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            background: white;
+        }
+
         .model-image::before {
             content: '';
             position: absolute;
@@ -416,7 +424,9 @@
             
             <div class="models-grid">
                 <div class="model-card" onclick="openModal('tn')">
-                    <div class="model-image">👟</div>
+                    <div class="model-image">
+                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/99486859-0ff7-49a4-9b77-bd7b5138cc8e/air-max-plus-shoes-ZrHrP5.png" alt="Nike Air Max TN" onerror="this.src=''; this.alt='Air Max TN'; this.style.display='none'; this.parentElement.innerHTML='👟';">
+                    </div>
                     <h3 class="model-title">Air Max TN</h3>
                     <div class="model-year">Lançado em 1998</div>
                     <p class="model-description">
@@ -431,7 +441,9 @@
                 </div>
 
                 <div class="model-card" onclick="openModal('dn')">
-                    <div class="model-image">🔥</div>
+                    <div class="model-image">
+                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1f2aa9c4-5b8a-4b8e-9c7a-8b5c4d3e2f1a/air-max-dn-shoes-kWLfHm.png" alt="Nike Air Max DN" onerror="this.src=''; this.alt='Air Max DN'; this.style.display='none'; this.parentElement.innerHTML='🔥';">
+                    </div>
                     <h3 class="model-title">Air Max DN</h3>
                     <div class="model-year">Lançado em 2024</div>
                     <p class="model-description">
@@ -446,7 +458,9 @@
                 </div>
 
                 <div class="model-card" onclick="openModal('95')">
-                    <div class="model-image">⚡</div>
+                    <div class="model-image">
+                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/16fcdf06-5391-4ab2-ba3c-80f7f948ad9b/air-max-95-shoes-X2ZzJV.png" alt="Nike Air Max 95" onerror="this.src=''; this.alt='Air Max 95'; this.style.display='none'; this.parentElement.innerHTML='⚡';">
+                    </div>
                     <h3 class="model-title">Air Max 95</h3>
                     <div class="model-year">Lançado em 1995</div>
                     <p class="model-description">
@@ -457,6 +471,57 @@
                         <li>Design anatômico</li>
                         <li>Gradiente de cores</li>
                         <li>Ícone dos anos 90</li>
+                    </ul>
+                </div>
+
+                <div class="model-card" onclick="openModal('90')">
+                    <div class="model-image">
+                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/zwxes8uud05rkuei1mpt/air-max-90-shoes-6n3vKB.png" alt="Nike Air Max 90" onerror="this.src=''; this.alt='Air Max 90'; this.style.display='none'; this.parentElement.innerHTML='🏃';">
+                    </div>
+                    <h3 class="model-title">Air Max 90</h3>
+                    <div class="model-year">Lançado em 1990</div>
+                    <p class="model-description">
+                        O clássico atemporal que definiu uma era. Com sua janela Air Max visível e design icônico, continua sendo um dos modelos mais populares.
+                    </p>
+                    <ul class="features-list">
+                        <li>Design clássico atemporal</li>
+                        <li>Air Max visível no calcanhar</li>
+                        <li>Construção durável</li>
+                        <li>Ícone dos anos 90</li>
+                    </ul>
+                </div>
+
+                <div class="model-card" onclick="openModal('1')">
+                    <div class="model-image">
+                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b7d9211c-26e7-431a-ac24-b0540fb3c00f/air-max-1-shoes-NIHq8j.png" alt="Nike Air Max 1" onerror="this.src=''; this.alt='Air Max 1'; this.style.display='none'; this.parentElement.innerHTML='🎯';">
+                    </div>
+                    <h3 class="model-title">Air Max 1</h3>
+                    <div class="model-year">Lançado em 1987</div>
+                    <p class="model-description">
+                        O pioneiro que iniciou tudo. Primeiro tênis a mostrar a tecnologia Air Max visível, revolucionando o mundo dos sneakers para sempre.
+                    </p>
+                    <ul class="features-list">
+                        <li>Primeiro Air Max visível</li>
+                        <li>Design revolucionário</li>
+                        <li>Mudou a história dos tênis</li>
+                        <li>Clássico absoluto</li>
+                    </ul>
+                </div>
+
+                <div class="model-card" onclick="openModal('97')">
+                    <div class="model-image">
+                        <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a8695f4e-db34-4ab2-9d2e-e2c6915c8aa5/air-max-97-shoes-VYCcNX.png" alt="Nike Air Max 97" onerror="this.src=''; this.alt='Air Max 97'; this.style.display='none'; this.parentElement.innerHTML='💫';">
+                    </div>
+                    <h3 class="model-title">Air Max 97</h3>
+                    <div class="model-year">Lançado em 1997</div>
+                    <p class="model-description">
+                        Inspirado nos trens-bala japoneses, o Air Max 97 trouxe Air Max de comprimento total e um design futurista que ainda impressiona.
+                    </p>
+                    <ul class="features-list">
+                        <li>Air Max de comprimento total</li>
+                        <li>Design inspirado em trens-bala</li>
+                        <li>Linhas onduladas características</li>
+                        <li>Reflexos metálicos</li>
                     </ul>
                 </div>
             </div>
@@ -471,41 +536,59 @@
                 <thead>
                     <tr>
                         <th>Característica</th>
+                        <th>Air Max 1</th>
+                        <th>Air Max 90</th>
+                        <th>Air Max 95</th>
+                        <th>Air Max 97</th>
                         <th>Air Max TN</th>
                         <th>Air Max DN</th>
-                        <th>Air Max 95</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Tecnologia de Ar</td>
-                        <td>Tuned Air</td>
-                        <td>Dynamic Air</td>
-                        <td>Air Max</td>
-                    </tr>
-                    <tr>
                         <td>Ano de Lançamento</td>
+                        <td>1987</td>
+                        <td>1990</td>
+                        <td>1995</td>
+                        <td>1997</td>
                         <td>1998</td>
                         <td>2024</td>
-                        <td>1995</td>
+                    </tr>
+                    <tr>
+                        <td>Tecnologia de Ar</td>
+                        <td>Air Max</td>
+                        <td>Air Max</td>
+                        <td>Air Max</td>
+                        <td>Air Max Total</td>
+                        <td>Tuned Air</td>
+                        <td>Dynamic Air</td>
                     </tr>
                     <tr>
                         <td>Designer</td>
+                        <td>Tinker Hatfield</td>
+                        <td>Tinker Hatfield</td>
+                        <td>Sergio Lozano</td>
+                        <td>Christian Tresser</td>
                         <td>Sean McDowell</td>
                         <td>Equipe Nike</td>
-                        <td>Sergio Lozano</td>
                     </tr>
                     <tr>
                         <td>Inspiração</td>
-                        <td>Tubarão/Palmeira</td>
-                        <td>Futuro Sustentável</td>
+                        <td>Centro Pompidou</td>
+                        <td>Arquitetura</td>
                         <td>Anatomia Humana</td>
+                        <td>Trens-Bala</td>
+                        <td>Tubarão/Palmeira</td>
+                        <td>Sustentabilidade</td>
                     </tr>
                     <tr>
                         <td>Peso Aproximado</td>
+                        <td>350g</td>
+                        <td>375g</td>
+                        <td>400g</td>
+                        <td>385g</td>
                         <td>380g</td>
                         <td>350g</td>
-                        <td>400g</td>
                     </tr>
                 </tbody>
             </table>
@@ -534,7 +617,23 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Air Max 95</h3>
+                        <h3>Air Max 1 - O Pioneiro</h3>
+                        <p>Tinker Hatfield revoluciona o mundo dos tênis ao tornar a tecnologia Air visível pela primeira vez, inspirado no Centro Pompidou em Paris.</p>
+                    </div>
+                    <div class="timeline-year">1987</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Air Max 90 - O Clássico</h3>
+                        <p>Hatfield aprimora o design com uma janela Air maior e visual mais robusto, criando um dos modelos mais duradouros da história.</p>
+                    </div>
+                    <div class="timeline-year">1990</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Air Max 95 - Anatomia Humana</h3>
                         <p>Sergio Lozano cria um design revolucionário inspirado na anatomia humana, com gradientes de cores que simulam músculos e ossos.</p>
                     </div>
                     <div class="timeline-year">1995</div>
@@ -542,7 +641,15 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Air Max TN</h3>
+                        <h3>Air Max 97 - Velocidade</h3>
+                        <p>Christian Tresser se inspira nos trens-bala japoneses para criar o primeiro Air Max de comprimento total com design futurista.</p>
+                    </div>
+                    <div class="timeline-year">1997</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Air Max TN - Agressividade</h3>
                         <p>Sean McDowell desenvolve a tecnologia Tuned Air, criando um tênis com visual agressivo inspirado em tubarões e palmeiras.</p>
                     </div>
                     <div class="timeline-year">1998</div>
@@ -550,15 +657,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Evolução Contínua</h3>
-                        <p>A linha Air Max continua evoluindo com novas tecnologias, materiais e designs, mantendo-se relevante na cultura sneaker.</p>
-                    </div>
-                    <div class="timeline-year">2000s</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Air Max DN</h3>
+                        <h3>Air Max DN - Sustentabilidade</h3>
                         <p>Lançamento do mais recente modelo com foco em sustentabilidade e tecnologia Dynamic Air para uma nova geração.</p>
                     </div>
                     <div class="timeline-year">2024</div>
@@ -632,6 +731,66 @@
                 <li>Silhueta baixa e elegante</li>
             </ul>
             <p><strong>Legado:</strong> Considerado um dos designs mais influentes da história dos sneakers, definindo tendências por décadas.</p>
+        </div>
+    </div>
+
+    <div id="modal-90" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('90')">&times;</span>
+            <h2>Nike Air Max 90 - Detalhes</h2>
+            <div class="model-image" style="height: 150px; margin: 20px 0;">🏃</div>
+            <p><strong>Nome Completo:</strong> Nike Air Max 90</p>
+            <p><strong>Designer:</strong> Tinker Hatfield</p>
+            <p><strong>Inspiração:</strong> Arquitetura moderna e linhas limpas</p>
+            <p><strong>Tecnologia:</strong> Air Max visível no calcanhar com maior janela</p>
+            <p><strong>Características Únicas:</strong></p>
+            <ul>
+                <li>Janela Air Max maior que o modelo anterior</li>
+                <li>Design mais robusto e esportivo</li>
+                <li>Construção durável com materiais premium</li>
+                <li>Silhueta icônica dos anos 90</li>
+            </ul>
+            <p><strong>Legado:</strong> Um dos modelos mais populares e duradouros da Nike, mantendo-se relevante por mais de 30 anos.</p>
+        </div>
+    </div>
+
+    <div id="modal-1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('1')">&times;</span>
+            <h2>Nike Air Max 1 - Detalhes</h2>
+            <div class="model-image" style="height: 150px; margin: 20px 0;">🎯</div>
+            <p><strong>Nome Completo:</strong> Nike Air Max 1</p>
+            <p><strong>Designer:</strong> Tinker Hatfield</p>
+            <p><strong>Inspiração:</strong> Centro Pompidou em Paris</p>
+            <p><strong>Tecnologia:</strong> Primeira tecnologia Air Max visível</p>
+            <p><strong>Características Únicas:</strong></p>
+            <ul>
+                <li>Primeiro tênis com Air visível na história</li>
+                <li>Revolucionou o design de calçados esportivos</li>
+                <li>Janela transparente mostrando a câmara de ar</li>
+                <li>Design minimalista e elegante</li>
+            </ul>
+            <p><strong>Legado:</strong> O pioneiro que mudou para sempre a indústria de sneakers, criando uma nova categoria de produtos.</p>
+        </div>
+    </div>
+
+    <div id="modal-97" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('97')">&times;</span>
+            <h2>Nike Air Max 97 - Detalhes</h2>
+            <div class="model-image" style="height: 150px; margin: 20px 0;">💫</div>
+            <p><strong>Nome Completo:</strong> Nike Air Max 97</p>
+            <p><strong>Designer:</strong> Christian Tresser</p>
+            <p><strong>Inspiração:</strong> Trens-bala japoneses e velocidade</p>
+            <p><strong>Tecnologia:</strong> Air Max de comprimento total</p>
+            <p><strong>Características Únicas:</strong></p>
+            <ul>
+                <li>Primeiro Air Max de comprimento total</li>
+                <li>Linhas onduladas inspiradas em velocidade</li>
+                <li>Reflexos metálicos característicos</li>
+                <li>Design futurista e aerodinâmico</li>
+            </ul>
+            <p><strong>Legado:</strong> Revolucionou novamente a linha Air Max com tecnologia de amortecimento total e design futurista.</p>
         </div>
     </div>
 
@@ -747,5 +906,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9883eb228169c20f',t:'MTc1OTQwNTE1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9883f0a9407fc20f',t:'MTc1OTQwNTM4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
